@@ -7,6 +7,10 @@
 
 <body>
 
+    <header>
+        <h3>Creeaza fanart pentru Pushi </h3>
+    </header>
+
     <nav>
         <ul>
             <li><a href="index.html">Acasa</a></li>
@@ -16,34 +20,34 @@
             <li> <a class="active" href="desen.html">Concurs de desen</a></li>
         </ul>
     </nav>
+    <main>
+        <p>Cele mai frumoase desene vor fi puse in camera ei</p>
+        <p>Cel mai frumos desen va fi premiat cu o vizita <strong>GRATUITA</strong></p>
 
-    <h3>Creeaza fanart pentru Pushi: </h3>
-    <p>Cele mai frumoase desene vor fi puse in camera ei</p>
-    <p>Cel mai frumos desen va fi premiat cu o vizita <strong>GRATUITA</strong></p>
+        <p>Castigatorul acestei luni: Denisa Popescu</p>
 
-    <p>Castigatorul acestei luni: Denisa Popescu</p>
+        <br>
+        <fieldset>
+            <legend>Desen:</legend>
+            <svg width='200' height='300'>
+                <title> A svg cat </title>
+                <desc> A stick figure of a cat </desc>
+                <!-- svg code for cat -->
 
-    <br>
-    <fieldset>
-        <legend>Desen:</legend>
-        <svg width='200' height='300'>
-            <title> A svg cat </title>
-            <desc> A stick figure of a cat </desc>
-            <!-- svg code for cat -->
+                <circle cx='70' cy='95' r='50' style='stroke:black;fill:none' />
+                <circle cx="55" cy="80" r="5" stroke="black" fill="#339933" />
+                <circle cx="85" cy="80" r="5" stroke="black" fill="#339933" />
+                <g id="whiskers">
+                    <line x1="75" y1="95" x2="135" y2="85" style="stroke: black;" />
+                    <line x1="75" y1="95" x2="135" y2="105" style="stroke: black;" />
+                </g>
 
-            <circle cx='70' cy='95' r='50' style='stroke:black;fill:none' />
-            <circle cx="55" cy="80" r="5" stroke="black" fill="#339933" />
-            <circle cx="85" cy="80" r="5" stroke="black" fill="#339933" />
-            <g id="whiskers">
-                <line x1="75" y1="95" x2="135" y2="85" style="stroke: black;" />
-                <line x1="75" y1="95" x2="135" y2="105" style="stroke: black;" />
-            </g>
-
-            <use xlink:href="#whiskers" transform="scale(-1 1) translate(-140 0)" />
-            <polyline points="108 62,  90 10,  70 45,  50, 10,  32, 62" style="stroke: black; fill: none;" />
-            <!-- mouth -->
-            <polyline points="35 110, 45 120, 95 120, 105, 110" style="stroke: black; fill: none;" />
-            <path d="M 75 90 L 65 90 A 5 10 0  0 0 75 90" style="stroke: black; fill: #ffcccc" />
-        </svg>
-    </fieldset>
+                <use xlink:href="#whiskers" transform="scale(-1 1) translate(-140 0)" />
+                <polyline points="108 62,  90 10,  70 45,  50, 10,  32, 62" style="stroke: black; fill: none;" />
+                <!-- mouth -->
+                <polyline points="35 110, 45 120, 95 120, 105, 110" style="stroke: black; fill: none;" />
+                <path d="M 75 90 L 65 90 A 5 10 0  0 0 75 90" style="stroke: black; fill: #ffcccc" />
+            </svg>
+        </fieldset>
+    </main>
 </body>
