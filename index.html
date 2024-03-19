@@ -1,38 +1,81 @@
 <html>
-
-<head>
+  <head>
     <title>Acasa</title>
-    <link rel="stylesheet" href="css/stil.css">
-</head>
+    <link rel="stylesheet" href="css/stil.css" />
+  </head>
 
-<body>
-
+  <body>
     <header>
-        <h3>Pushi</h3>
-        <h5>Cea mai frumoasă pisică din Valea Lupului</h5>
+      <h1 style="margin-top: 25px; margin-bottom: 16px">Domnișoara Pushi</h1>
+      <h4 style="margin-bottom: 0px">Pisica șefă pe Valea Lupului</h4>
     </header>
 
-    <nav>
-        <ul>
-            <li><a class="active" href="index.html">Acasa</a></li>
-            <li><a href="despre.html">Despre</a></li>
-            <li><a href="video.html">Video</a></li>
-            <li><a href="inregistreaza.html">Inregistreaza-te</a></li>
-            <li> <a href="desen.html">Concurs de desen</a></li>
-        </ul>
-    </nav>
+    <div class="branding-line"></div>
+    <br />
 
-    <main>
-        <section>
-            <p>Aceasta pagina are scopul de a prezenta intregii lumi frumusetea pisicii mele in special.</p>
-            <p>Consider ca toata lumea trebuie sa aiba ocazia unica in viata de a o vedea in toata splendoarea ei.</p>
-            <p>Iata doar cateva articole care sigur iti vor starni curiozitatea: </p>
-        </section>
+    <div style="margin: auto; width: fit-content">
+      <nav class="navMenu">
+        <a href="index.html" style="margin-right: 10px">Acasă</a>
+        <a href="despre.html" style="margin-right: 10px">Despre</a>
+        <a href="video.html" style="margin-right: 10px">Video</a>
+        <a href="inregistreaza.html" style="margin-right: 10px">
+          Înregistrează-te
+        </a>
+        <a href="desen.html">Concurs de desen</a>
+        <div class="dot"></div>
+      </nav>
+    </div>
 
-        <article>
-            <iframe src="articol.html" style="border:2px solid lightpink;" title="Iframe Example"></iframe>
-            <iframe src="articol2.html" style="border:2px solid lightpink;" title="Iframe Example"></iframe>
+    <br />
 
-        </article>
-        <main>
-</body>
+    <div style="width: fit-content; margin: auto">
+      <button
+        onclick="changeContent('text')"
+        id="text-btn"
+        class="circle"
+      ></button>
+
+      <button
+        onclick="changeContent('photo')"
+        id="photo-btn"
+        class="circle"
+      ></button>
+    </div>
+
+    <main id="text-content">
+      <section>
+        <p>Bine ai venit, bine ai nimerit 🫡</p>
+        <p>
+          Acest site web are scopul de a o ridica in slăvi pe pisica mea, Pushi
+        </p>
+        <p>Imi este mega ultra dor de ea 😿</p>
+        <p>(Pushi nu e moarta, doar mi-e mereu dor de ea)</p>
+        <p>
+          Consider că toată lumea trebuie să aibă ocazia unică în viată de a o
+          vedea în toată splendoarea ei.
+        </p>
+      </section>
+    </main>
+
+    <main id="photo-content" style="display: none">
+      <img src="/imagini/pushi_closeup.jpg" alt="Pushi" height="400px" />
+    </main>
+  </body>
+  <script>
+    function changeContent(contentName) {
+      const textContent = document.getElementById("text-content");
+      const photoContent = document.getElementById("photo-content");
+
+      textContent.style.display = contentName === "text" ? "block" : "none";
+      photoContent.style.display = contentName === "photo" ? "block" : "none";
+
+      const textBtn = document.getElementById("text-btn");
+      const photoBtn = document.getElementById("photo-btn");
+
+      textBtn.style.backgroundColor =
+        contentName === "text" ? "#c970b0" : "#f5c6ea";
+      photoBtn.style.backgroundColor =
+        contentName === "photo" ? "#c970b0" : "#f5c6ea";
+    }
+  </script>
+</html>

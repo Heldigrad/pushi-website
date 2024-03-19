@@ -1,42 +1,76 @@
 <html>
-
-<head>
+  <head>
     <title>Video</title>
-    <link rel="stylesheet" href="css/stil.css">
-</head>
+    <link rel="stylesheet" href="css/stil.css" />
+  </head>
 
-<body>
-
+  <body>
     <header>
-        <h3>Informatii generale</h3>
+      <h1 style="margin-top: 25px">Domnișoara Pushi</h1>
+      <h4 style="margin-bottom: 0px">Povestea vieții</h4>
     </header>
 
-    <nav>
-        <ul>
-            <li><a href="index.html">Acasa</a></li>
-            <li><a href="despre.html">Despre</a></li>
-            <li><a class="active" href="video.html">Video</a></li>
-            <li><a href="inregistreaza.html">Inregistreaza-te</a></li>
-            <li> <a href="desen.html">Concurs de desen</a></li>
-        </ul>
-    </nav>
+    <div class="branding-line"></div>
+    <br />
+
+    <div style="margin: auto; width: fit-content">
+      <nav class="navMenu">
+        <a href="index.html" style="margin-right: 10px">Acasă</a>
+        <a href="despre.html" style="margin-right: 10px">Despre</a>
+        <a href="video.html" style="margin-right: 10px">Video</a>
+        <a href="inregistreaza.html" style="margin-right: 10px">
+          Înregistrează-te
+        </a>
+        <a href="desen.html">Concurs de desen</a>
+        <div class="dot"></div>
+      </nav>
+    </div>
 
     <main>
+      <section>
+        <p>
+          Pushi s-a nascut in Valea Lupului, in <a href="iasi.html">Iasi</a>
+        </p>
+        <p>De atunci, Comuna Valea Lupului se afla in continua dezvoltare:</p>
+        <iframe
+          width="500"
+          height="280"
+          src="https://youtube.com/embed/_5olsz8QeVM"
+        >
+        </iframe>
 
-        <section>
-            <p>Pushi s-a nascut in Valea Lupului, in <a href="iasi.html">Iasi</a></p>
-            <p>Comuna Valea Lupului s-a dezvoltat mult de cand s-a nascut <a href="despre.html">Pushi</a> acolo: </p>
-            <iframe width="500" height="280" src="https://youtube.com/embed/_5olsz8QeVM">
-            </iframe>
+        <p>
+          Pushi s-a nascut iarna in curtea vecinilor. Ii era frig, asa ca s-a
+          adapostit la motorul
+          <a href="https://en.wikipedia.org/wiki/Ford_Galaxy">masinii noastre</a
+          >:
+        </p>
+        <iframe
+          width="500"
+          height="280"
+          src="https://youtube.com/embed/Rk8klyq2jsE"
+        >
+        </iframe>
+        <p>
+          FUN FACT: Tata nu a observat prea repede că are o pisică în motor la
+          mașină și a pornit la drum,
+        </p>
+        <p>ajungând PÂNĂ LA SERVICIU cu Pushi încă la motor.</p>
+        <p>Nu vreau să-mi imaginez prin ce a trecut.</p>
+        <p>
+          Nu cred că și-a învățat lecția totuși. Nu e deloc terorizată de
+          mașini:)
+        </p>
 
-            <p>Pushi s-a nascut iarna in curtea vecinilor. Ii era frig asa ca s-a adapostit la motorul <a
-                    href="https://en.wikipedia.org/wiki/Ford_Galaxy">masinii noastre</a>: </p>
-            <iframe width="500" height="280" src="https://youtube.com/embed/Rk8klyq2jsE">
-            </iframe>
-
-            <p>Din fericire tata a gasit-o la timp si a adoptat-o (mersi tata)</p>
-            <iframe width="500" height="280" src="https://youtube.com/embed/XLM5E9gzdP8">
-            </iframe>
-        </section>
+        <video width="250" height="300" controls muted>
+          <source src="imagini/video_ford.mp4" type="video/mp4" />
+          Your browser does not support the video tag.
+        </video>
+        <video width="250" height="300" controls muted>
+          <source src="imagini/video_juke.mp4" type="video/mp4" />
+          Your browser does not support the video tag.
+        </video>
+      </section>
     </main>
-</body>
+  </body>
+</html>

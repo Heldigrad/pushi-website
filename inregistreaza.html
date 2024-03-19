@@ -1,103 +1,114 @@
 <html>
-
-<head>
+  <head>
     <title>Inregistreaza</title>
-    <link rel="stylesheet" href="css/stil.css">
-</head>
+    <link rel="stylesheet" href="css/stil.css" />
+  </head>
 
-<body>
+  <body>
     <header>
-        <h3>Programeaza o intalnire cu Pushi</h3>
-        <p style="font-size: 10px;">(transportul nu este inclus)</p>
+      <h1 style="margin-top: 25px">Domnișoara Pushi</h1>
+      <h4 style="margin-bottom: 0px">Programează o întâlnire</h4>
     </header>
 
+    <div class="branding-line"></div>
+    <br />
 
-    <nav>
-        <ul>
-            <li><a href="index.html">Acasa</a></li>
-            <li><a href="despre.html">Despre</a></li>
-            <li><a href="video.html">Video</a></li>
-            <li><a class="active" href="inregistreaza.html">Inregistreaza-te</a></li>
-            <li> <a href="desen.html">Concurs de desen</a></li>
-        </ul>
-    </nav>
+    <div style="margin: auto; width: fit-content">
+      <nav class="navMenu">
+        <a href="index.html" style="margin-right: 10px">Acasă</a>
+        <a href="despre.html" style="margin-right: 10px">Despre</a>
+        <a href="video.html" style="margin-right: 10px">Video</a>
+        <a href="inregistreaza.html" style="margin-right: 10px">
+          Înregistrează-te
+        </a>
+        <a href="desen.html">Concurs de desen</a>
+        <div class="dot"></div>
+      </nav>
+    </div>
+
     <main>
-        <p>Creeaza cont: </p>
-        <form>
-            <fieldset>
-                <legend> Informatii generale </legend>
+      <p>Creează cont:</p>
+      <form>
+        <fieldset style="margin: auto">
+          <legend>Informatii generale</legend>
 
-                <label for="nickname">Nume utilizator:</label><br>
-                <input type="text" id="nickname" name="nickname"><br>
+          <label for="nickname">Nume utilizator:</label><br />
+          <input type="text" id="nickname" name="nickname" /><br />
 
-                <label for="pwd">Parola:</label><br>
-                <input type="password" id="pwd" name="pwd"><br>
+          <label for="pwd">Parola:</label><br />
+          <input type="password" id="pwd" name="pwd" /><br />
 
-                <label for="nume">Nume:</label><br>
-                <input type="text" id="nume" name="nume"><br>
+          <label for="nume">Nume:</label><br />
+          <input type="text" id="nume" name="nume" /><br />
 
-                <label for="prenume">Prenume:</label><br>
-                <input type="text" id="prenume" name="prenume"><br>
+          <label for="prenume">Prenume:</label><br />
+          <input type="text" id="prenume" name="prenume" /><br />
 
-                <label for="mail">Email:</label><br>
-                <input type="email" id="mail" name="mail"><br>
+          <label for="mail">Email:</label><br />
+          <input type="email" id="mail" name="mail" /><br />
 
-                <label for="telefon">Telefon:</label><br>
-                <input type="tel" id="telefon" name="telefon"><br>
+          <label for="telefon">Telefon:</label><br />
+          <input type="tel" id="telefon" name="telefon" /><br />
+        </fieldset>
 
-            </fieldset>
+        <fieldset>
+          <legend>Informatii personale</legend>
 
-            <fieldset>
-                <legend> Informatii personale </legend>
+          <label for="sexul">Sexul:</label>
+          <select id="sexul" name="sexul">
+            <option value="F">F</option>
+            <option value="M">M</option>
+            <option value="Altul">Altul</option>
+          </select>
+          <br />
 
-                <label for="sexul">Sexul:</label>
-                <select id="sexul" name="sexul">
-                    <option value="F">F</option>
-                    <option value="M">M</option>
-                    <option value="Altul">Altul</option>
-                </select> <br>
+          <label for="mancare">Mancarea adusa pentru Pushi:</label><br />
+          <input list="mancare-list" id="mancare" name="mancare" />
+          <datalist id="mancare-list">
+            <option value="Peste"></option>
+            <option value="Pui"></option>
+            <option value="Vita"></option>
+            <option value="Pastai"></option>
+            <option value="Plicuri Felix"></option>
+            <option
+              value="Nimic (se percepe o taxa suplimentara)"
+            ></option></datalist
+          ><br />
 
-                <label for="mancare">Mancarea adusa pentru Pushi:</label><br>
-                <input list="mancare-list" id="mancare" name="mancare" />
-                <datalist id="mancare-list">
-                    <option value="Peste"></option>
-                    <option value="Pui"></option>
-                    <option value="Vita"></option>
-                    <option value="Pastai"></option>
-                    <option value="Plicuri Felix"></option>
-                    <option value="Nimic (se percepe o taxa suplimentara)"></option>
-                </datalist><br>
+          <label for="car">Marca masinii cu care veniti si alte detalii:</label
+          ><br />
+          <input type="textarea" id="car" name="car" /> <br />
 
-                <label for="car">Marca masinii cu care veniti si alte detalii:</label><br>
-                <input type="textarea" id="car" name="car"> <br>
+          <label for="culoare">Culoarea masinii cu care veniti:</label>
+          <input type="color" id="culoare" name="culoare" /><br />
 
-                <label for="culoare">Culoarea masinii cu care veniti:</label>
-                <input type="color" id="culoare" name="culoare"><br>
+          <label for="data">Ziua programarii:</label>
+          <input type="date" id="data" name="data" /><br />
 
-                <label for="data">Ziua programarii:</label>
-                <input type="date" id="data" name="data"><br>
+          <label for="hour">Ora programarii:</label>
+          <input type="time" id="hour" name="hour" /><br />
 
-                <label for="hour">Ora programarii:</label>
-                <input type="time" id="hour" name="hour"><br>
+          <label for="age">Varsta:</label> 18
+          <input type="range" id="age" name="age" /> 100 <br />
 
-                <label for="age">Varsta:</label> 18
-                <input type="range" id="age" name="age"> 100 <br>
+          <label for="url">Adresa paginii personale:</label>
+          <input type="url" id="url" name="url" /> <br />
+        </fieldset>
+        <p>Veti fi contactat pentru confirmarea programarii</p>
+        <p>
+          <strong>Va rugam nu va prezentati fara confirmarea progrmarii</strong>
+        </p>
+        <br />
 
-                <label for="url">Adresa paginii personale:</label>
-                <input type="url" id="url" name="url"> <br>
+        <input type="checkbox" id="acord" name="acord" value="acord" />
+        <label for="acord">
+          Am luat la cunostinta perceperea unei taxe de vizitare de 59.99 lei
+          (<strong>CASH ONLY</strong>)</label
+        ><br />
 
-            </fieldset>
-            <p>Veti fi contactat pentru confirmarea programarii</p>
-            <p><strong>Va rugam nu va prezentati fara confirmarea progrmarii</strong></p>
-            <br>
-
-            <input type="checkbox" id="acord" name="acord" value="acord">
-            <label for="acord"> Am luat la cunostinta perceperea unei taxe de vizitare de 59.99 lei (<strong>CASH
-                    ONLY</strong>)</label><br>
-
-            <br>
-            <input type="submit" value="Inregistreaza" disabled>
-
-        </form>
+        <br />
+        <input type="submit" value="Inregistreaza" disabled />
+      </form>
     </main>
-</body>
+  </body>
+</html>
