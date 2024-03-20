@@ -1,9 +1,12 @@
 body {
   margin: 0;
   background-image: url(/imagini/background.jpg);
-  background-position: center; /* Center the image */
-  background-repeat: no-repeat; /* Do not repeat the image */
-  background-size: cover; /* Resize the background image to cover the entire container */
+  background-position: center;
+  /* Center the image */
+  background-repeat: no-repeat;
+  /* Do not repeat the image */
+  background-size: cover;
+  /* Resize the background image to cover the entire container */
   background-attachment: fixed;
 }
 
@@ -120,6 +123,14 @@ p {
 .navMenu a:nth-child(5):hover ~ .dot {
   -webkit-transform: translateX(450px);
   transform: translateX(450px);
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+  opacity: 1;
+}
+
+.navMenu a:nth-child(6):hover ~ .dot {
+  -webkit-transform: translateX(562px);
+  transform: translateX(562px);
   -webkit-transition: all 0.2s ease-in-out;
   transition: all 0.2s ease-in-out;
   opacity: 1;
