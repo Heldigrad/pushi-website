@@ -1,36 +1,37 @@
 const html = String.raw;
 
-setInterval(getTimeStamp, 10);
-
 function getTimeStamp() {
-  console.log("ceva");
-
-  const currentDate = new Date();
-  const timeStamp = currentDate.toLocaleString("ro");
   const section = document.getElementById("datetime");
 
-  const url = location.href;
+  //date & time
+  const currentDate = new Date();
+  const timeStamp = currentDate.toLocaleString("ro");
 
+  //url
+  const url = window.location.href;
+
+  //browser details
   let browser = navigator.userAgent;
 
+  //location
+  let location = "";
   if (!("geolocation" in navigator)) {
-    section.innerHTML = "browserul nu suporta geolocatia";
-
+    location = "browserul nu suporta geolocatia";
     return;
   }
 
   navigator.geolocation.getCurrentPosition(
     (position) => {
-      const location =
+      location =
         "Latitude: " +
         position.coords.latitude +
-        "<br>Longitude: " +
+        "<br/>Longitude: " +
         position.coords.longitude;
 
       section.innerHTML =
         "data si ora: " +
         timeStamp +
-        "<br/> locatia: " +
+        "<br/>locatia: " +
         location +
         "<br/>URL: " +
         url +
@@ -38,22 +39,23 @@ function getTimeStamp() {
         browser;
     },
     () => {
-      const location = "permisiuni insuficiente";
+      location = "permisiuni insuficiente";
 
-      //   section.innerHTML = html`
-      //     <p>
-      //       <br />
-      //     </p>
-      //   `;
       section.innerHTML =
         "data si ora: " +
         timeStamp +
-        "\nlocatia: " +
+        "<br/>locatia: " +
         location +
         "<br/>URL: " +
-        url;
+        url +
+        "<br/>browser: " +
+        browser;
     }
   );
 }
 
-window.addEventListener("load", getTimeStamp);
+window.addEventListener("load", () => {
+  getTimeStamp();
+
+  setInterval(getTimeStamp, 200);
+});
